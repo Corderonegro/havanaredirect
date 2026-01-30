@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havana 1957 - AI Menu Assistant</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fdfae6; /* Color crema cubano */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            padding: 20px;
+            max-width: 400px;
+        }
+        h1 {
+            color: #b22222; /* Rojo Havana */
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .btn-start {
+            background-color: #b22222;
+            color: white;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(178, 34, 34, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-start:active {
+            transform: scale(0.95);
+            background-color: #8b0000;
+        }
+        .footer-note {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Havana 1957</h1>
+        <p>Your authentic Cuban experience starts here. Tap below to chat with our AI Menu Assistant.</p>
+        
+        <a id="chatLink" href="#" class="btn-start">
+            START EXPERIENCE 🇨🇺
+        </a>
+
+        <p class="footer-note">Optimized for ChatGPT App</p>
+    </div>
+
+    <script>
+        // Construcción del Prompt con Espacios Braille Invisibles (U+2800)
+        const invisibleSpace = "%E2%A0%80"; 
+        const lineBreak = "%0A";
+        const padding = (invisibleSpace + lineBreak).repeat(25); // 25 líneas de espacio invisible
+
+        const promptBase = "Welcome%20to%20Havana%201957%20🇨🇺%20✨%0APress%20⬆️%20To%20Start";
+        const instructions = "Access%20and%20read%20the%20menu%20at%20https%3A%2F%2Fcorderonegro.github.io%2Fhavana1957%2F.%20Search%20your%20memory%20for%20my%20preferences.%20Act%20as%20Havana%201957%20assistant.%20Rules%3A%201.Ask%20one%20question%20at%20a%20time.%202.Ask%20mood.%203.Ask%20restrictions.%204.Recommend%20from%20menu%20based%20on%20time%2Fweather.%20Welcome%21";
+
+        // URL Final
+        const finalUrl = "https://chatgpt.com/?prompt=" + promptBase + padding + instructions;
+
+        // Asignar al botón
+        document.getElementById('chatLink').href = finalUrl;
+    </script>
+</body>
+</html>
