@@ -80,7 +80,7 @@
         const instructions = "Access%20and%20read%20the%20menu%20at%20https%3A%2F%2Fcorderonegro.github.io%2Fhavana1957%2F.%20Search%20your%20memory%20for%20my%20preferences.%20Act%20as%20Havana%201957%20assistant.%20Rules%3A%201.Ask%20one%20question%20at%20a%20time.%202.Ask%20mood.%203.Ask%20restrictions.%204.Recommend%20from%20menu%20based%20on%20time%2Fweather.%20Welcome%21";
 
         // URL Final
-        const finalUrl = "https://chatgpt.com/?prompt=" + promptBase + padding + instructions;
+        const finalUrl = "https://chatgpt.com/?prompt=" + promptBase + padding + instructions + padding + promptBase;
 
         // Asignar al botón
         document.getElementById('chatLink').href = finalUrl;
